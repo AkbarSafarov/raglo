@@ -1,0 +1,208 @@
+$cs-breakpoint-lg: 991px;
+$cs-breakpoint-md: 767px;
+
+.cs-page {
+    padding-top: 36px;
+    padding-bottom: 112px;
+
+    @media all and (max-width: $cs-breakpoint-md) {
+        padding-top: 24px;
+        padding-bottom: 34px;
+    }
+}
+
+// ─── Sections ────────────────────────────────────────────────────────────────
+
+.cs-section {
+    padding: 32px;
+    background: var(--brand-white);
+    border-radius: 8px;
+    margin-bottom: 24px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @media all and (max-width: $cs-breakpoint-md) {
+        padding: 24px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    &__title {
+        font-family: var(--second-family);
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 113%;
+        letter-spacing: -0.03em;
+        color: var(--brand-black);
+        margin-bottom: 32px;
+
+        .cs-section__header & {
+            margin-bottom: 0;
+        }
+
+        @media all and (max-width: $cs-breakpoint-md) {
+            font-size: 24px;
+        }
+    }
+
+    &__desc {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--t-black-80);
+        margin-bottom: 32px;
+
+        @media all and (max-width: $cs-breakpoint-md) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__icon {
+        flex-shrink: 0;
+    }
+}
+
+// ─── Benefit Cards ────────────────────────────────────────────────────────────
+
+.cs-benefit-card {
+    background: var(--brand-light);
+    border-radius: 8px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 296px;
+    height: 100%;
+
+    @media all and (max-width: $cs-breakpoint-md) {
+        min-height: 160px;
+        padding: 16px;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: auto;
+    }
+
+    &__bottom {
+        margin-top: 40px;
+
+        @media all and (max-width: $cs-breakpoint-md) {
+            margin-top: 24px;
+        }
+    }
+
+    &__label {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--t-black-40);
+        margin-bottom: 16px;
+    }
+
+    &__title {
+        font-family: var(--second-family);
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 117%;
+        letter-spacing: -0.02em;
+        color: var(--brand-black);
+
+        @media all and (max-width: $cs-breakpoint-md) {
+            font-size: 18px;
+        }
+    }
+}
+
+// ─── Buyer's Guide ────────────────────────────────────────────────────────────
+
+.cs-guide {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__item {
+        display: flex;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--brand-black);
+        transition: color 0.3s;
+
+        &::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.031 12.5307L9.53104 20.0307C9.46136 20.1004 9.37863 20.1556 9.28759 20.1933C9.19654 20.2311 9.09896 20.2505 9.00042 20.2505C8.90187 20.2505 8.80429 20.2311 8.71324 20.1933C8.6222 20.1556 8.53947 20.1004 8.46979 20.0307C8.40011 19.961 8.34483 19.8783 8.30712 19.7872C8.26941 19.6962 8.25 19.5986 8.25 19.5001C8.25 19.4015 8.26941 19.3039 8.30712 19.2129C8.34483 19.1218 8.40011 19.0391 8.46979 18.9694L15.4401 12.0001L8.46979 5.03068C8.32906 4.88995 8.25 4.69907 8.25 4.50005C8.25 4.30103 8.32906 4.11016 8.46979 3.96943C8.61052 3.8287 8.80139 3.74963 9.00042 3.74963C9.19944 3.74963 9.39031 3.8287 9.53104 3.96943L17.031 11.4694C17.1008 11.5391 17.1561 11.6218 17.1938 11.7128C17.2316 11.8039 17.251 11.9015 17.251 12.0001C17.251 12.0986 17.2316 12.1962 17.1938 12.2873C17.1561 12.3783 17.1008 12.461 17.031 12.5307Z' fill='%23191415' fill-opacity='0.8' /%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &:hover {
+            color: var(--brand-red);
+
+            &::before {
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.031 12.5307L9.53104 20.0307C9.46136 20.1004 9.37863 20.1556 9.28759 20.1933C9.19654 20.2311 9.09896 20.2505 9.00042 20.2505C8.90187 20.2505 8.80429 20.2311 8.71324 20.1933C8.6222 20.1556 8.53947 20.1004 8.46979 20.0307C8.40011 19.961 8.34483 19.8783 8.30712 19.7872C8.26941 19.6962 8.25 19.5986 8.25 19.5001C8.25 19.4015 8.26941 19.3039 8.30712 19.2129C8.34483 19.1218 8.40011 19.0391 8.46979 18.9694L15.4401 12.0001L8.46979 5.03068C8.32906 4.88995 8.25 4.69907 8.25 4.50005C8.25 4.30103 8.32906 4.11016 8.46979 3.96943C8.61052 3.8287 8.80139 3.74963 9.00042 3.74963C9.19944 3.74963 9.39031 3.8287 9.53104 3.96943L17.031 11.4694C17.1008 11.5391 17.1561 11.6218 17.1938 11.7128C17.2316 11.8039 17.251 11.9015 17.251 12.0001C17.251 12.0986 17.2316 12.1962 17.1938 12.2873C17.1561 12.3783 17.1008 12.461 17.031 12.5307Z' fill='%23E20013FF' fill-opacity='0.8' /%3E%3C/svg%3E");
+            }
+        }
+    }
+}
+
+// ─── Sidebar Nav with Icons ───────────────────────────────────────────────────
+
+.cs-nav {
+    .side-links__list li a,
+    .side-links__list li a:hover {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .side-links__link--active {
+        background: var(--brand-light);
+
+        .cs-nav__icon svg path,
+        .cs-nav__icon svg rect {
+            fill: var(--brand-red) !important;
+            fill-opacity: 1 !important;
+        }
+    }
+}
+
+.cs-nav__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}

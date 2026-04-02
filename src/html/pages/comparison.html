@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    @@include('head.html', {"title": "Сравнение — Rango"})
+</head>
+<body>
+<div class="site_wrapper">
+    @@include('header.html')
+    <div class="content_block_wr">
+
+    <section class="comparison-section">
+        <div class="content-padding">
+
+            <div class="path_block d-flex align-items-center gap-2">
+                <a href="">Главная</a><span></span><a href="">Каталог</a><span></span>Сравнение
+            </div>
+
+            <div class="comparison-header">
+                <div class="comparison-header__left">
+                    <h1 class="m-0">Сравнение</h1>
+                    <span class="comparison-header__count"><span>8</span> товаров</span>
+                </div>
+                <button class="comparison-header__clear link_btn" type="button">
+                    <span>Удалить все</span>
+                    <i class="bi">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.875 4.375H13.75V3.75C13.75 3.25272 13.5525 2.77581 13.2008 2.42417C12.8492 2.07254 12.3723 1.875 11.875 1.875H8.125C7.62772 1.875 7.1508 2.07254 6.79917 2.42417C6.44754 2.77581 6.25 3.25272 6.25 3.75V4.375H3.125C2.95924 4.375 2.80027 4.44085 2.68306 4.55806C2.56585 4.67527 2.5 4.83424 2.5 5C2.5 5.16576 2.56585 5.32473 2.68306 5.44194C2.80027 5.55915 2.95924 5.625 3.125 5.625H3.75V16.875C3.75 17.2065 3.8817 17.5245 4.11612 17.7589C4.35054 17.9933 4.66848 18.125 5 18.125H15C15.3315 18.125 15.6495 17.9933 15.8839 17.7589C16.1183 17.5245 16.25 17.2065 16.25 16.875V5.625H16.875C17.0408 5.625 17.1997 5.55915 17.3169 5.44194C17.4341 5.32473 17.5 5.16576 17.5 5C17.5 4.83424 17.4341 4.67527 17.3169 4.55806C17.1997 4.44085 17.0408 4.375 16.875 4.375ZM7.5 3.75C7.5 3.58424 7.56585 3.42527 7.68306 3.30806C7.80027 3.19085 7.95924 3.125 8.125 3.125H11.875C12.0408 3.125 12.1997 3.19085 12.3169 3.30806C12.4342 3.42527 12.5 3.58424 12.5 3.75V4.375H7.5V3.75ZM15 16.875H5V5.625H15V16.875ZM8.75 8.75V13.75C8.75 13.9158 8.68415 14.0747 8.56694 14.1919C8.44973 14.3092 8.29076 14.375 8.125 14.375C7.95924 14.375 7.80027 14.3092 7.68306 14.1919C7.56585 14.0747 7.5 13.9158 7.5 13.75V8.75C7.5 8.58424 7.56585 8.42527 7.68306 8.30806C7.80027 8.19085 7.95924 8.125 8.125 8.125C8.29076 8.125 8.44973 8.19085 8.56694 8.30806C8.68415 8.42527 8.75 8.58424 8.75 8.75ZM12.5 8.75V13.75C12.5 13.9158 12.4342 14.0747 12.3169 14.1919C12.1997 14.3092 12.0408 14.375 11.875 14.375C11.7092 14.375 11.5503 14.3092 11.4331 14.1919C11.3158 14.0747 11.25 13.9158 11.25 13.75V8.75C11.25 8.58424 11.3158 8.42527 11.4331 8.30806C11.5503 8.19085 11.7092 8.125 11.875 8.125C12.0408 8.125 12.1997 8.19085 12.3169 8.30806C12.4342 8.42527 12.5 8.58424 12.5 8.75Z" fill="#191415" fill-opacity="0.8"/>
+                        </svg>
+                    </i>
+                </button>
+            </div>
+
+            <!-- Products -->
+            <div class="comparison-products-wrap">
+                <div class="arrow">
+                    <div class="arrow_btn prev">
+                        <i class="bi bi-arrow-left"></i>
+                    </div>
+                    <div class="arrow_btn next">
+                        <i class="bi bi-arrow-left"></i>
+                    </div>
+                </div>
+                <div class="swiper mySwiper_products-comparison" data-id="mySwiper_products-comparison" data-arrow="products-comparison">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            @@include('product.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('product2.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('product3.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('product3.html')
+                        </div>
+                        <div class="swiper-slide">
+                            @@include('product3.html')
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comparison-toggle-table">
+                <!-- Toggle -->
+                <div class="comparison-toggle-wrap">
+                    <label class="comparison-toggle">
+                        <input type="checkbox" checked>
+                        <span class="comparison-toggle__track"></span>
+                    </label>
+                    <span>Показать только различия</span>
+                </div>
+
+                <!-- Specs table -->
+                <div class="comparison-specs-table-wrap">
+                    <div class="comparison-specs-table">
+
+                        <div class="comparison-spec-row">
+                            <div class="comparison-spec-label">Назначение</div>
+                            <div class="spec-row">
+                                <div class="comparison-spec-col">Для кухни</div>
+                                <div class="comparison-spec-col">Для раковины</div>
+                                <div class="comparison-spec-col">Для раковины</div>
+                                <div class="comparison-spec-col">Для ванны</div>
+                            </div>
+                        </div>
+
+                        <div class="comparison-spec-row">
+                            <div class="comparison-spec-label">Материал</div>
+                            <div class="spec-row">
+                                <div class="comparison-spec-col">Латунь</div>
+                                <div class="comparison-spec-col">Сталь</div>
+                                <div class="comparison-spec-col">Пластик</div>
+                                <div class="comparison-spec-col">Карбон</div>
+                            </div>
+                        </div>
+
+                        <div class="comparison-spec-row">
+                            <div class="comparison-spec-label">Цвет</div>
+                            <div class="spec-row">
+                                <div class="comparison-spec-col">Хром</div>
+                                <div class="comparison-spec-col">Черный</div>
+                                <div class="comparison-spec-col">Хром</div>
+                                <div class="comparison-spec-col">Сатин</div>
+                            </div>
+                        </div>
+
+                        <div class="comparison-spec-row">
+                            <div class="comparison-spec-label">Тип управления</div>
+                            <div class="spec-row">
+                                <div class="comparison-spec-col">Рычажное</div>
+                                <div class="comparison-spec-col">Рычажное</div>
+                                <div class="comparison-spec-col">Термостатические</div>
+                                <div class="comparison-spec-col">Двухвентильные</div>
+                            </div>
+                        </div>
+
+                        <div class="comparison-spec-row">
+                            <div class="comparison-spec-label">Подключение к фильтру</div>
+                            <div class="spec-row">
+                                <div class="comparison-spec-col">Да</div>
+                                <div class="comparison-spec-col">Нет</div>
+                                <div class="comparison-spec-col">Да</div>
+                                <div class="comparison-spec-col">Да</div>
+                            </div>
+                        </div>
+
+                        <div class="comparison-spec-row">
+                            <div class="comparison-spec-label">Длина излива</div>
+                            <div class="spec-row">
+                                <div class="comparison-spec-col">370</div>
+                                <div class="comparison-spec-col">290</div>
+                                <div class="comparison-spec-col">180</div>
+                                <div class="comparison-spec-col">90</div>
+                            </div>
+                        </div>
+
+                        <div class="comparison-spec-row">
+                            <div class="comparison-spec-label">Вращение излива</div>
+                            <div class="spec-row">
+                                <div class="comparison-spec-col">С гибким изливом</div>
+                                <div class="comparison-spec-col">Поворотный</div>
+                                <div class="comparison-spec-col">Поворотный</div>
+                                <div class="comparison-spec-col">Стационарный</div>
+                            </div>
+                        </div>
+
+                        <div class="comparison-spec-row">
+                            <div class="comparison-spec-label">Стандарт подводки</div>
+                            <div class="spec-row">
+                                <div class="comparison-spec-col">1/2"</div>
+                                <div class="comparison-spec-col">3/4"</div>
+                                <div class="comparison-spec-col">1/2"</div>
+                                <div class="comparison-spec-col">1/2"</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Delete row -->
+                    <div class="comparison-delete-row">
+                    <div class="comparison-delete-col">
+                        <button class="btn_button border comparison-delete-btn" type="button">
+                            <span>Удалить</span>
+                            <i class="bi">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.25 5.25H16.5V4.5C16.5 3.90326 16.2629 3.33097 15.841 2.90901C15.419 2.48705 14.8467 2.25 14.25 2.25H9.75C9.15326 2.25 8.58097 2.48705 8.15901 2.90901C7.73705 3.33097 7.5 3.90326 7.5 4.5V5.25H3.75C3.55109 5.25 3.36032 5.32902 3.21967 5.46967C3.07902 5.61032 3 5.80109 3 6C3 6.19891 3.07902 6.38968 3.21967 6.53033C3.36032 6.67098 3.55109 6.75 3.75 6.75H4.5V20.25C4.5 20.6478 4.65804 21.0294 4.93934 21.3107C5.22064 21.592 5.60218 21.75 6 21.75H18C18.3978 21.75 18.7794 21.592 19.0607 21.3107C19.342 21.0294 19.5 20.6478 19.5 20.25V6.75H20.25C20.4489 6.75 20.6397 6.67098 20.7803 6.53033C20.921 6.38968 21 6.19891 21 6C21 5.80109 20.921 5.61032 20.7803 5.46967C20.6397 5.32902 20.4489 5.25 20.25 5.25ZM9 4.5C9 4.30109 9.07902 4.11032 9.21967 3.96967C9.36032 3.82902 9.55109 3.75 9.75 3.75H14.25C14.4489 3.75 14.6397 3.82902 14.7803 3.96967C14.921 4.11032 15 4.30109 15 4.5V5.25H9V4.5ZM18 20.25H6V6.75H18V20.25ZM10.5 10.5V16.5C10.5 16.6989 10.421 16.8897 10.2803 17.0303C10.1397 17.171 9.94891 17.25 9.75 17.25C9.55109 17.25 9.36032 17.171 9.21967 17.0303C9.07902 16.8897 9 16.6989 9 16.5V10.5C9 10.3011 9.07902 10.1103 9.21967 9.96967C9.36032 9.82902 9.55109 9.75 9.75 9.75C9.94891 9.75 10.1397 9.82902 10.2803 9.96967C10.421 10.1103 10.5 10.3011 10.5 10.5ZM15 10.5V16.5C15 16.6989 14.921 16.8897 14.7803 17.0303C14.6397 17.171 14.4489 17.25 14.25 17.25C14.0511 17.25 13.8603 17.171 13.7197 17.0303C13.579 16.8897 13.5 16.6989 13.5 16.5V10.5C13.5 10.3011 13.579 10.1103 13.7197 9.96967C13.8603 9.82902 14.0511 9.75 14.25 9.75C14.4489 9.75 14.6397 9.82902 14.7803 9.96967C14.921 10.1103 15 10.3011 15 10.5Z" fill="#191415" fill-opacity="0.8" />
+                                </svg>
+                            </i>
+                        </button>
+                    </div>
+                    <div class="comparison-delete-col">
+                        <button class="btn_button border comparison-delete-btn" type="button">
+                            <span>Удалить</span>
+                            <i class="bi">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.25 5.25H16.5V4.5C16.5 3.90326 16.2629 3.33097 15.841 2.90901C15.419 2.48705 14.8467 2.25 14.25 2.25H9.75C9.15326 2.25 8.58097 2.48705 8.15901 2.90901C7.73705 3.33097 7.5 3.90326 7.5 4.5V5.25H3.75C3.55109 5.25 3.36032 5.32902 3.21967 5.46967C3.07902 5.61032 3 5.80109 3 6C3 6.19891 3.07902 6.38968 3.21967 6.53033C3.36032 6.67098 3.55109 6.75 3.75 6.75H4.5V20.25C4.5 20.6478 4.65804 21.0294 4.93934 21.3107C5.22064 21.592 5.60218 21.75 6 21.75H18C18.3978 21.75 18.7794 21.592 19.0607 21.3107C19.342 21.0294 19.5 20.6478 19.5 20.25V6.75H20.25C20.4489 6.75 20.6397 6.67098 20.7803 6.53033C20.921 6.38968 21 6.19891 21 6C21 5.80109 20.921 5.61032 20.7803 5.46967C20.6397 5.32902 20.4489 5.25 20.25 5.25ZM9 4.5C9 4.30109 9.07902 4.11032 9.21967 3.96967C9.36032 3.82902 9.55109 3.75 9.75 3.75H14.25C14.4489 3.75 14.6397 3.82902 14.7803 3.96967C14.921 4.11032 15 4.30109 15 4.5V5.25H9V4.5ZM18 20.25H6V6.75H18V20.25ZM10.5 10.5V16.5C10.5 16.6989 10.421 16.8897 10.2803 17.0303C10.1397 17.171 9.94891 17.25 9.75 17.25C9.55109 17.25 9.36032 17.171 9.21967 17.0303C9.07902 16.8897 9 16.6989 9 16.5V10.5C9 10.3011 9.07902 10.1103 9.21967 9.96967C9.36032 9.82902 9.55109 9.75 9.75 9.75C9.94891 9.75 10.1397 9.82902 10.2803 9.96967C10.421 10.1103 10.5 10.3011 10.5 10.5ZM15 10.5V16.5C15 16.6989 14.921 16.8897 14.7803 17.0303C14.6397 17.171 14.4489 17.25 14.25 17.25C14.0511 17.25 13.8603 17.171 13.7197 17.0303C13.579 16.8897 13.5 16.6989 13.5 16.5V10.5C13.5 10.3011 13.579 10.1103 13.7197 9.96967C13.8603 9.82902 14.0511 9.75 14.25 9.75C14.4489 9.75 14.6397 9.82902 14.7803 9.96967C14.921 10.1103 15 10.3011 15 10.5Z" fill="#191415" fill-opacity="0.8" />
+                                </svg>
+                            </i>
+                        </button>
+                    </div>
+                    <div class="comparison-delete-col">
+                        <button class="btn_button border comparison-delete-btn" type="button">
+                            <span>Удалить</span>
+                            <i class="bi">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.25 5.25H16.5V4.5C16.5 3.90326 16.2629 3.33097 15.841 2.90901C15.419 2.48705 14.8467 2.25 14.25 2.25H9.75C9.15326 2.25 8.58097 2.48705 8.15901 2.90901C7.73705 3.33097 7.5 3.90326 7.5 4.5V5.25H3.75C3.55109 5.25 3.36032 5.32902 3.21967 5.46967C3.07902 5.61032 3 5.80109 3 6C3 6.19891 3.07902 6.38968 3.21967 6.53033C3.36032 6.67098 3.55109 6.75 3.75 6.75H4.5V20.25C4.5 20.6478 4.65804 21.0294 4.93934 21.3107C5.22064 21.592 5.60218 21.75 6 21.75H18C18.3978 21.75 18.7794 21.592 19.0607 21.3107C19.342 21.0294 19.5 20.6478 19.5 20.25V6.75H20.25C20.4489 6.75 20.6397 6.67098 20.7803 6.53033C20.921 6.38968 21 6.19891 21 6C21 5.80109 20.921 5.61032 20.7803 5.46967C20.6397 5.32902 20.4489 5.25 20.25 5.25ZM9 4.5C9 4.30109 9.07902 4.11032 9.21967 3.96967C9.36032 3.82902 9.55109 3.75 9.75 3.75H14.25C14.4489 3.75 14.6397 3.82902 14.7803 3.96967C14.921 4.11032 15 4.30109 15 4.5V5.25H9V4.5ZM18 20.25H6V6.75H18V20.25ZM10.5 10.5V16.5C10.5 16.6989 10.421 16.8897 10.2803 17.0303C10.1397 17.171 9.94891 17.25 9.75 17.25C9.55109 17.25 9.36032 17.171 9.21967 17.0303C9.07902 16.8897 9 16.6989 9 16.5V10.5C9 10.3011 9.07902 10.1103 9.21967 9.96967C9.36032 9.82902 9.55109 9.75 9.75 9.75C9.94891 9.75 10.1397 9.82902 10.2803 9.96967C10.421 10.1103 10.5 10.3011 10.5 10.5ZM15 10.5V16.5C15 16.6989 14.921 16.8897 14.7803 17.0303C14.6397 17.171 14.4489 17.25 14.25 17.25C14.0511 17.25 13.8603 17.171 13.7197 17.0303C13.579 16.8897 13.5 16.6989 13.5 16.5V10.5C13.5 10.3011 13.579 10.1103 13.7197 9.96967C13.8603 9.82902 14.0511 9.75 14.25 9.75C14.4489 9.75 14.6397 9.82902 14.7803 9.96967C14.921 10.1103 15 10.3011 15 10.5Z" fill="#191415" fill-opacity="0.8" />
+                                </svg>
+                            </i>
+                        </button>
+                    </div>
+                    <div class="comparison-delete-col">
+                        <button class="btn_button border comparison-delete-btn" type="button">
+                            <span>Удалить</span>
+                            <i class="bi">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.25 5.25H16.5V4.5C16.5 3.90326 16.2629 3.33097 15.841 2.90901C15.419 2.48705 14.8467 2.25 14.25 2.25H9.75C9.15326 2.25 8.58097 2.48705 8.15901 2.90901C7.73705 3.33097 7.5 3.90326 7.5 4.5V5.25H3.75C3.55109 5.25 3.36032 5.32902 3.21967 5.46967C3.07902 5.61032 3 5.80109 3 6C3 6.19891 3.07902 6.38968 3.21967 6.53033C3.36032 6.67098 3.55109 6.75 3.75 6.75H4.5V20.25C4.5 20.6478 4.65804 21.0294 4.93934 21.3107C5.22064 21.592 5.60218 21.75 6 21.75H18C18.3978 21.75 18.7794 21.592 19.0607 21.3107C19.342 21.0294 19.5 20.6478 19.5 20.25V6.75H20.25C20.4489 6.75 20.6397 6.67098 20.7803 6.53033C20.921 6.38968 21 6.19891 21 6C21 5.80109 20.921 5.61032 20.7803 5.46967C20.6397 5.32902 20.4489 5.25 20.25 5.25ZM9 4.5C9 4.30109 9.07902 4.11032 9.21967 3.96967C9.36032 3.82902 9.55109 3.75 9.75 3.75H14.25C14.4489 3.75 14.6397 3.82902 14.7803 3.96967C14.921 4.11032 15 4.30109 15 4.5V5.25H9V4.5ZM18 20.25H6V6.75H18V20.25ZM10.5 10.5V16.5C10.5 16.6989 10.421 16.8897 10.2803 17.0303C10.1397 17.171 9.94891 17.25 9.75 17.25C9.55109 17.25 9.36032 17.171 9.21967 17.0303C9.07902 16.8897 9 16.6989 9 16.5V10.5C9 10.3011 9.07902 10.1103 9.21967 9.96967C9.36032 9.82902 9.55109 9.75 9.75 9.75C9.94891 9.75 10.1397 9.82902 10.2803 9.96967C10.421 10.1103 10.5 10.3011 10.5 10.5ZM15 10.5V16.5C15 16.6989 14.921 16.8897 14.7803 17.0303C14.6397 17.171 14.4489 17.25 14.25 17.25C14.0511 17.25 13.8603 17.171 13.7197 17.0303C13.579 16.8897 13.5 16.6989 13.5 16.5V10.5C13.5 10.3011 13.579 10.1103 13.7197 9.96967C13.8603 9.82902 14.0511 9.75 14.25 9.75C14.4489 9.75 14.6397 9.82902 14.7803 9.96967C14.921 10.1103 15 10.3011 15 10.5Z" fill="#191415" fill-opacity="0.8" />
+                                </svg>
+                            </i>
+                        </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner_section" style="background-image: url(files/banner2.jpg);">
+        <div class="content-padding">
+            <div class="name">душевые системы raglo</div>
+            <h2 class="title">Выбор настоящих <br> ценителей</h2>
+            <a href="" class="btn_button white">
+                <span>Перейти</span>
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+    @@include('preim-block.html')
+
+    </div>
+    @@include('footer.html')
+</div>
+</body>
+</html>

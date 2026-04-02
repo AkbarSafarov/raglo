@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    @@include('head.html', {"title": "Ошибка 404"})
+</head>
+<body>
+<div class="site_wrapper">
+    @@include('header.html')
+    <div class="content_block_wr">
+        <section class="banner_section page-404" style="background-image: url(files/404.jpg);">
+            <div class="content-padding">
+                <div class="name">Ошибка 404</div>
+                <h2 class="title">Страница не найдена</h2>
+                <div class="text">К сожалению, такой страницы не существует. Возможно, вы перешли по ссылке, в которой была допущена ошибка, или страница была удалена. Воспользуйтесь поиском или попробуйте начать с главной страницы.</div>
+                <a href="/" class="btn_button white">
+                    <span>На главную</span>
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+        @@include('preim-block.html')
+    </div>
+    @@include('footer.html')
+</div>
+</body>
+</html>

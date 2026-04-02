@@ -1,0 +1,21 @@
+// ─── Base ─────────────────────────────────────────────────────────────────────
+@use 'components/colors';
+@use 'components/fonts';
+
+// ─── Blocks ───────────────────────────────────────────────────────────────────
+@use 'blocks/icons';
+
+// ─── Vendor ───────────────────────────────────────────────────────────────────
+@use 'vendor/inner-style';
+
+// ─── Segments ─────────────────────────────────────────────────────────────────
+@use 'segments/main';
+@use 'segments/card';
+@use 'segments/cart';
+@use 'segments/account';
+@use 'segments/order-page';
+@use 'segments/client-service';
+@use 'segments/contacts';
+@use 'segments/comparison';
+@use 'segments/catalog-menu';
+@use 'segments/404-page' as page404;
